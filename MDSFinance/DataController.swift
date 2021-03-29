@@ -10,7 +10,7 @@ import Foundation
 class DataController {
     var StockItems = [Stock]()
     //ЗДЕСЬ МОЖЕТ БЫТЬ ВАШ ТОКЕН (Finnhub.com)
-    var apiToken = ""
+    var apiToken = "c1h0j9f48v6t9ghtiu90"
     weak var delegate: DataControllerDelegate?
     //Запрос цены по акции
     func requestStockPrice(for index: Int) {
