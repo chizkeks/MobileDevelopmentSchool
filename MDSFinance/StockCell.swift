@@ -42,44 +42,30 @@ class StockCell: UITableViewCell {
     }
     
     
-    public func displayStockInfo(for index: Int) {
-        self.companyNameLabel?.text = dataController.StockItems[index].companyName
-        self.companySymbolLabel?.text = dataController.StockItems[index].companySymbol
-        self.priceLabel?.text = "\(dataController.StockItems[index].price)"
+    public func displayStockInfo(for dataSource: Stock) {
+        self.companyNameLabel?.text =  dataSource.companyName
+        self.companySymbolLabel?.text = dataSource.companySymbol
+        self.priceLabel?.text = "$\(dataSource.price)"
         
-        if dataController.StockItems[index].priceChange > 0 {
-            self.priceChangeLabel?.text = "+$\(String(format: "%.2f",dataController.StockItems[index].priceChange))"
+        if dataSource.priceChange > 0 {
+            self.priceChangeLabel?.text = "+$\(String(format: "%.2f",dataSource.priceChange))"
             self.priceChangeLabel?.textColor = UIColor.green
         }
-        else if dataController.StockItems[index].priceChange < 0 {
-            self.priceChangeLabel?.text = "-$\(String(format: "%.2f",abs(dataController.StockItems[index].priceChange)))"
+        else if dataSource.priceChange < 0 {
+            self.priceChangeLabel?.text = "-$\(String(format: "%.2f",abs(dataSource.priceChange)))"
             self.priceChangeLabel?.textColor = UIColor.red
         }
         else {
-            self.priceChangeLabel?.text = "\(String(format: "%.2f",dataController.StockItems[index].priceChange))"
+            self.priceChangeLabel?.text = "\(String(format: "%.2f",dataSource.priceChange))"
             self.priceChangeLabel?.textColor = UIColor.black
         }
-        self.companyNameLabel?.sizeToFit()
-        uploadCompanyLogo(for: dataController.StockItems[index].companySymbol)
-    }
-    
-    //MARK:- Получение  логотипа по тикету акции
-    public func uploadCompanyLogo(for symbol: String) {
-        //companyLogo.image = [UIImage imageWithContentsOfURL: url
+        //self.companyNameLabel?.sizeToFit()
         
-        let url = URL(string: "https://storage.googleapis.com/iex/api/logos/\(symbol).png")!
-        let dataTask = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            guard
-                error == nil,
-                (response as? HTTPURLResponse)?.statusCode == 200,
-                let data = data
-                else {return}
-            DispatchQueue.main.async {
-                self.companyLogoImage.image = UIImage(data: data)
-            }
-        }
-        dataTask.resume()
+        self.favStarButton?.tintColor = dataSource.isFavorite ? UIColor.systemYellow : UIColor.lightGray
+
+        self.companyLogoImage.image = dataSource.logo
+        //dataSource. uploadCompanyLogo(for: dataSource.companySymbol)
+        
     }
     
 }

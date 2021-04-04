@@ -21,3 +21,13 @@ struct QuoteApiResponse: Codable {
     let o:  Double
     let c: Double
 }
+
+struct AllAvailableTicketsResponse: Codable {
+    let symbol: String
+    let name: String
+}
+
+struct AvailableTicket: Codable {
+    let symbol: String
+    let name: String
+}

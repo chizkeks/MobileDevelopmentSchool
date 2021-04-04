@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataControllerDelegate: class {
-    func priceHasBeenModified()
+    func priceHasBeenModified(forRow : Int)
 }

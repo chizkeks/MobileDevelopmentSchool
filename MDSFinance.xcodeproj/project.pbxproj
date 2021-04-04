@@ -10,7 +10,6 @@
 		486F232C261244910031D8B9 /* JsonParsingStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F232B261244910031D8B9 /* JsonParsingStructs.swift */; };
 		486F2338261253260031D8B9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F2337261253260031D8B9 /* DataController.swift */; };
 		486F233B2612534B0031D8B9 /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F233A2612534B0031D8B9 /* DataControllerDelegate.swift */; };
-		486F233F261265FA0031D8B9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F233E261265FA0031D8B9 /* FavoritesViewController.swift */; };
 		48D7B447260E4344001A177E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7B446260E4344001A177E /* AppDelegate.swift */; };
 		48D7B449260E4344001A177E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7B448260E4344001A177E /* SceneDelegate.swift */; };
 		48D7B44B260E4344001A177E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7B44A260E4344001A177E /* ViewController.swift */; };
@@ -19,13 +18,14 @@
 		48D7B453260E4345001A177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D7B451260E4345001A177E /* LaunchScreen.storyboard */; };
 		48D7B484260E7257001A177E /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7B483260E7257001A177E /* Stock.swift */; };
 		48D7B487260E7A16001A177E /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7B486260E7A16001A177E /* StockCell.swift */; };
+		48ED01B126165D9600A32D96 /* TableViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED01B026165D9600A32D96 /* TableViewDetail.swift */; };
+		48ED01B4261A367900A32D96 /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ED01B3261A367900A32D96 /* APIkeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		486F232B261244910031D8B9 /* JsonParsingStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParsingStructs.swift; sourceTree = "<group>"; };
 		486F2337261253260031D8B9 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		486F233A2612534B0031D8B9 /* DataControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerDelegate.swift; sourceTree = "<group>"; };
-		486F233E261265FA0031D8B9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		48D7B443260E4344001A177E /* MDSFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDSFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D7B446260E4344001A177E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D7B448260E4344001A177E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		48D7B454260E4345001A177E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D7B483260E7257001A177E /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		48D7B486260E7A16001A177E /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
+		48ED01B026165D9600A32D96 /* TableViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDetail.swift; sourceTree = "<group>"; };
+		48ED01B3261A367900A32D96 /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,16 +73,17 @@
 				48D7B446260E4344001A177E /* AppDelegate.swift */,
 				48D7B448260E4344001A177E /* SceneDelegate.swift */,
 				48D7B44A260E4344001A177E /* ViewController.swift */,
-				486F233E261265FA0031D8B9 /* FavoritesViewController.swift */,
 				486F2337261253260031D8B9 /* DataController.swift */,
 				486F233A2612534B0031D8B9 /* DataControllerDelegate.swift */,
 				486F232B261244910031D8B9 /* JsonParsingStructs.swift */,
 				48D7B44C260E4344001A177E /* Main.storyboard */,
+				48ED01B026165D9600A32D96 /* TableViewDetail.swift */,
 				48D7B486260E7A16001A177E /* StockCell.swift */,
 				48D7B44F260E4345001A177E /* Assets.xcassets */,
 				48D7B451260E4345001A177E /* LaunchScreen.storyboard */,
 				48D7B454260E4345001A177E /* Info.plist */,
 				48D7B483260E7257001A177E /* Stock.swift */,
+				48ED01B3261A367900A32D96 /* APIkeys.swift */,
 			);
 			path = MDSFinance;
 			sourceTree = "<group>";
@@ -156,10 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D7B44B260E4344001A177E /* ViewController.swift in Sources */,
-				486F233F261265FA0031D8B9 /* FavoritesViewController.swift in Sources */,
 				486F232C261244910031D8B9 /* JsonParsingStructs.swift in Sources */,
 				48D7B447260E4344001A177E /* AppDelegate.swift in Sources */,
+				48ED01B4261A367900A32D96 /* APIkeys.swift in Sources */,
 				48D7B487260E7A16001A177E /* StockCell.swift in Sources */,
+				48ED01B126165D9600A32D96 /* TableViewDetail.swift in Sources */,
 				48D7B484260E7257001A177E /* Stock.swift in Sources */,
 				486F2338261253260031D8B9 /* DataController.swift in Sources */,
 				48D7B449260E4344001A177E /* SceneDelegate.swift in Sources */,
